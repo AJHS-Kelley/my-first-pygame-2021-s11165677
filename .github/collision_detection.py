@@ -1,4 +1,4 @@
-#PyGame Collision Detection, Antonio Gonzales, January 27, 2022,9:20am, v0.5
+#PyGame Collision Detection, Antonio Gonzales, Febuary 02, 2022, 8:53am, v0.6
 
 import pygame, sys, random
 from pygame.locals import *
@@ -35,3 +35,27 @@ moveUp = False
 moveDown = False 
 
 MOVESPEED = 6
+
+# Run the game loop.
+while true:
+    # Check for events.
+    for event in pygame.event.get():
+        if event.type == QUIT:
+            pygame.quit()
+            sys.exit()
+         if event.type == KEYDOWN:
+                #change the keyboard variables.
+                if event.key == K_LEFT or event.key == K_a:
+                    moveRight = False
+                    moveLeft = True 
+                if event.key == K_RIGHT or event.key == K_d:
+                    moveLeft = False 
+                    moveRight = True 
+                if event.key == K_UP or event.key == K_w:
+                    moveDown = False 
+                    moveUp = True
+                if event.key == K_DOWN or evnt.key == K_s:
+                    moveUP = False
+                    moveDown = True 
+
+                                    
